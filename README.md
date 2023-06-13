@@ -1,4 +1,10 @@
+# RUN without package manager, nor libraries
+
+Do `make` to compile the c library.
+Then in chez, do `(load "http.scm")` followed by `(load "example/example.sc")`.
+
 # Igropyr
+
 Cross platform async http-server for Chez Scheme
 
 ## [Manual](https://guenchi.github.io/Igropyr)

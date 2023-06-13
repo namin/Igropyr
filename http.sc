@@ -22,26 +22,14 @@
 
 
 
-(library (igropyr http)
-  (export
-    server
-    listen
-    set
-    request
-    response
-    sendfile
-    errorpage
-    header-parser
-    path-parser
-    par
-  )
-  (import
-    (chezscheme)
-    (only (core alist) ref)
-  )
+(begin
+  (define ref
+    (case-lambda
+     ([asl key] (ref asl key #f))
+     ([asl key default] (let ([rst (assoc key asl)])
+                          (if rst (cdr rst) default)))))
 
-
-  (define lib (load-shared-object "./lib/igropyr/httpc.so"))
+  (define lib (load-shared-object "./httpc.so"))
 
   (define igr_init
     (foreign-procedure "igr_init" (string string int) int))

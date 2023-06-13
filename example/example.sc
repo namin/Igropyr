@@ -1,5 +1,3 @@
-(import (igropyr http))
-
 (printf "server is start, listen on port..~a\n" 8080)
 
 (define get
