@@ -1,7 +1,7 @@
 # RUN without package manager, nor libraries
 
 Do `make` to compile the c library.
-Then in chez, do `(load "http.scm")` followed by `(load "example/example.sc")`.
+Then in chez, do `(load "http.sc")` followed by `(load "example/example.sc")`.
 
 # Igropyr
 
